@@ -1,0 +1,82 @@
+#include <stdio.h>
+
+int sum(int a,int b);
+int sub(int a,int b);
+int multiply(int a,int b);
+int divide(int a,int b);
+
+int main()
+{
+  int n;
+    printf("Enter the choice(1/2/3/4)[D/M/A/S]=");
+    scanf("%d",&n);
+   if(n>=5){
+     printf("invalid entry");
+   }
+   
+  
+  if(n==1){
+   int j;
+   printf("Enter the divisor= \n");
+   scanf("%d",&j);
+   int k;
+   printf("Enter the dividend=\n");
+   scanf("%d",&k);
+   int d=divide(j,k);
+   printf("Quotient=%d",d);
+  
+   }
+   
+   if(n==2){
+     int x;
+     printf("Enter 1st number =\n");
+     scanf("%d",&x);
+     int y;
+     printf("Enter the 2nd number =\n");
+     scanf("%d",&y);
+     int m=multiply(x,y);
+     printf("Product of these two number=%d",m);
+   } 
+   
+   if(n==3){
+     int g;
+     printf("Enter 1st number =\n ");
+     scanf("%d",&g);
+     int h;
+     printf("Enter the 2nd number =\n");
+     scanf("%d",&h);
+    int a=sum(g,h);
+     printf("Sum of these two number =%d \n",a);
+   }
+   
+   if(n==4){
+     int s;
+     printf("Enter 1st number = \n");
+     scanf("%d",&s);
+     int t;
+     printf("Enter the 2nd number = \n");
+     scanf("%d",&t);
+     int su=sub(s,t);
+     printf("Difference of these two number = %d \n",su);
+   }
+   
+  return 0;
+}
+
+
+
+int sum(int a,int b){
+  return a+b;
+}
+
+int sub(int a,int b){
+  return a-b;
+}
+
+int multiply(int a,int b){
+  return a*b;
+}
+
+int divide(int a,int b){
+  return b/a;
+}
